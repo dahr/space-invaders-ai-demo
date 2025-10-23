@@ -35,7 +35,46 @@ Required dependencies:
 - `react-dom` (^18.0.0)
 - A build tool like Vite or Create React App
 
-## Project Setup
+## Running Locally
+
+### Quick Start (Existing Project)
+
+If the project is already set up with all files:
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start the development server:
+```bash
+npm run dev      # For Vite projects
+# OR
+npm start        # For Create React App projects
+```
+
+3. Open your browser to the URL shown in the terminal (usually `http://localhost:5173` for Vite or `http://localhost:3000` for Create React App)
+
+4. Play the game!
+
+### For AI Developers
+
+To run this app locally, execute these commands in sequence:
+
+```bash
+# Navigate to project directory
+cd space-invaders-clone
+
+# Install all required packages
+npm install
+
+# Start development server
+npm run dev
+```
+
+The app will automatically open in your default browser. If not, manually navigate to the local server URL displayed in the terminal output.
+
+## Project Setup (From Scratch)
 
 ### Option 1: Using Vite (Recommended)
 
@@ -57,6 +96,8 @@ npm install
 npm run dev
 ```
 
+5. Open browser to `http://localhost:5173`
+
 ### Option 2: Using Create React App
 
 1. Create a new React app:
@@ -71,6 +112,22 @@ cd space-invaders
 ```bash
 npm start
 ```
+
+4. Open browser to `http://localhost:3000`
+
+### Verifying Your Local Setup
+
+After running the development server, you should see:
+- The game centered on a dark background
+- "Score" and "Lives" displayed at the top
+- A "Start Game" button in the center
+- Canvas size: 1200px × 800px
+- Stars twinkling in the background
+
+If the game appears offset or small, check that:
+- All code from `App.jsx` is correctly copied
+- No conflicting CSS files are overriding styles
+- Browser cache is cleared (Ctrl+Shift+R or Cmd+Shift+R)
 
 ## Deployment
 
@@ -171,13 +228,36 @@ Defend Earth by destroying all the flying saucers before they reach the bottom o
 
 ### Local Development
 ```bash
+npm run dev       # For Vite (opens on port 5173)
+# OR
+npm start         # For Create React App (opens on port 3000)
+```
+
+### Common Local Development Commands
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview   # For Vite only
+
+# Clear cache and reinstall (if having issues)
+rm -rf node_modules package-lock.json
+npm install
 ```
 
 ### Build for Production
 ```bash
 npm run build
 ```
+
+The build output will be in the `dist/` folder (Vite) or `build/` folder (Create React App).
 
 ### File Structure
 ```
